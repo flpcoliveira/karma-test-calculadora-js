@@ -1,0 +1,26 @@
+{
+  "name": "karma-test-calculadora-js",
+  "version": "1.0.0",
+  "description": "Projeto para teste da ferramenta de teste unitário Karma",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flpcoliveira/karma-test-calculadora-js.git"
+  },
+  "author": "flpcoliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flpcoliveira/karma-test-calculadora-js/issues"
+  },
+  "homepage": "https://github.com/flpcoliveira/karma-test-calculadora-js#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.6.2",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-requirejs": "^1.1.0"
+  }
+}
