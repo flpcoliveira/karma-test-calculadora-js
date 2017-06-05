@@ -6,8 +6,9 @@ define(['app', 'jquery'], function(Calculadora, $){
             //expect(Calculadora.somar).toBeDefined();
             //console.log(calc.somar(5, 7));
             var res = calc.somar(5, 7);
+            console.log(res);
 
-            expect(calc.temErro()).toEqual(false);
+            //expect(calc.temErro()).toEqual(false);
             expect(res).toEqual(12);            
         });
 
