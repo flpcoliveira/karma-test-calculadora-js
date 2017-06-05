@@ -1,23 +1,20 @@
 define(['app', 'jquery'], function(Calculadora, $){
     describe('Testando Calculadora', function(){
         it('Testando Soma com operandos válidos', function(){
-
             var calc = new Calculadora();
-            //expect(Calculadora.somar).toBeDefined();
-            //console.log(calc.somar(5, 7));
             var res = calc.somar(5, 7);
-            console.log(res);
-
-            //expect(calc.temErro()).toEqual(false);
-            expect(res).toEqual(12);            
+            expect(res).toEqual(12);          
         });
 
-/*
+
         it('Testando soma com operandos inválidos', function(){
-
+            var calc = new Calculadora();
+            var res = calc.somar('a', 7);
+            var msg = calc.msgErro[0];
+            expect(calc.msgErro[0]).toBe('operando 1 inválido');  
         });
 
-        it('Testando subtração com operandos válidos', function(){
+       /* it('Testando subtração com operandos válidos', function(){
 
         });
 
@@ -39,8 +36,8 @@ define(['app', 'jquery'], function(Calculadora, $){
 
         it('Testando divisão com operandos inválidos', function(){
 
-        });
-        */
+        });*/
+        
         
     });
 

@@ -71,7 +71,7 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
     htmlReporter: {
-      outputFile: 'tests/units.html',
+      outputFile: 'test/units.html',
 
       // Optional
       pageTitle: 'Unit Tests',
