@@ -15,12 +15,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'lib/**/*.js', included: false}
+      {pattern: 'lib/**/*.js', included: false},
+      {pattern: 'src/**/*.js', included: false},
+      {pattern: 'test/**/*Spec.js', included: false},
+
+        'test/test-main.js',
     ],
 
 
     // list of files to exclude
     exclude: [
+      'src/main.js'
     ],
 
 
@@ -64,6 +69,13 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
-  })
-}
+    concurrency: Infinity,
+    htmlReporter: {
+      outputFile: 'tests/units.html',
+
+      // Optional
+      pageTitle: 'Unit Tests',
+      subPageTitle: 'A sample project description'
+    }
+  });
+};
