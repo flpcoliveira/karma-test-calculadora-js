@@ -6,6 +6,7 @@
         "node_modules": true,
         ".vscode": true,
         "coverage": true
-    }
-
+    },
+    
+    "files.autoSave": "afterDelay"
 }
