@@ -24,10 +24,12 @@ define(function () {
     };
 
     this.validarDenominador = function (denominador) {
-        if (denominador === 0) {
+        if (denominador == 0) {
             this.codErro.push(2);
             this.msgErro.push('Operando 2 deve ser diferente de 0');
         }
+        return this.codErro.length == 0;
+
     };
 
     this.temErro = function () {
@@ -68,7 +70,7 @@ define(function () {
 
     this.dividir = function (op1, op2) {
         if (this.validarOperandos(op1, op2)) {
-            if (validarDenominador(op2)) {
+            if (this.validarDenominador(op2)) {
                 return op1 / op2;
             }
         }
