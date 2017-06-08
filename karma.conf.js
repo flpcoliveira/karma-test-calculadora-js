@@ -1,19 +1,16 @@
-// Karma configuration
-// Generated on Sun Jun 04 2017 20:49:03 GMT-0300 (Hora oficial do Brasil)
-
+/* Configuração do Karma */
 module.exports = function (config) {
   config.set({
 
-    // base path that will be used to resolve all patterns (eg. files, exclude)
+    /* diretório raiz */
     basePath: '',
 
 
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    /* Frameworks utilizados durante o teste */
     frameworks: ['jasmine', 'requirejs'],
 
 
-    // list of files / patterns to load in the browser
+    /* Lista de Arquivos ou critérios para inclusão de arquivos necessários para os testes */
     files: [
       { pattern: 'lib/**/*.js', included: false },
       { pattern: 'src/**/*.js', included: false },
@@ -23,59 +20,52 @@ module.exports = function (config) {
     ],
 
 
-    // list of files to exclude
+    /* Arquivos que não serão testados */
     exclude: [
       'src/main.js'
     ],
 
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    /* Processa os arquivos a serem testados antes da execução dos testes */
     preprocessors: {
       'src/**/*.js': ["coverage"]
     },
 
 
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    /* Ferramentas de geração de relatórios após a conclusão dos testes */
      reporters: ["mocha", "coverage"],
 
-
-    // web server port
+    /* Porta de execução do Karma*/
     port: 9876,
 
 
-    // enable / disable colors in the output (reporters and logs)
+    /* Configuração a exibição de dados coloridos no container */
     colors: true,
 
-
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    /* Nível de Log gerado no  console */
     logLevel: config.LOG_INFO,
 
 
-    // enable / disable watching file and executing tests whenever any file changes
+    /* Define se os testes serão executados automaticamente se houver alguma alteração nos arquivos */
     autoWatch: true,
 
 
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    /* Browsers onde serão executados os testes */
+    browsers: ['Chrome', 'Firefox', 'IE'],
 
 
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
+    /* Define se o teste será executado uma unica vez ou continuamente */
     singleRun: false,
 
-    // Concurrency level
-    // how many browser should be started simultaneous
+    /* Define quantos Browser podem ser executados simultaneamente */
     concurrency: Infinity,
+
+    /* Configuração do plugin coverage */
     coverageReporter: {
       type: "lcov",
       dir: "coverage/"
     },
 
+    /* Configuração do plugin mocha */
     mochaReporter: {
       output: "autowatch"
     }
