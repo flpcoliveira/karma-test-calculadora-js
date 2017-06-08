@@ -8,5 +8,5 @@
         "coverage": true
     },
     
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "off"
 }

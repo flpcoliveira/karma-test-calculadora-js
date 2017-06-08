@@ -48,24 +48,12 @@ module.exports = function (config) {
     /* Define se os testes serão executados automaticamente se houver alguma alteração nos arquivos */
     autoWatch: true,
 
-
-<<<<<<< HEAD
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'IE'],
-
-
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
-=======
     /* Browsers onde serão executados os testes */
     browsers: ['Chrome', 'Firefox', 'IE'],
 
 
     /* Define se o teste será executado uma unica vez ou continuamente */
     singleRun: false,
->>>>>>> origin/master
 
     /* Define quantos Browser podem ser executados simultaneamente */
     concurrency: Infinity,
