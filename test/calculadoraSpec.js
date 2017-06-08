@@ -1,6 +1,6 @@
 define(['calculadora', 'jquery'], function (Calculadora, $) {
 
-    /* Suite de Testes para a Calculadora */
+    /* Suite de Testes para o Módulo Calculadora */
     describe('Calculadora', function () {
 
         /* Ação a ser executada antes de cada caso de teste */
