@@ -5,6 +5,6 @@ requirejs.config({
     }
 });
 
-define(['app', 'jquery'], function(Calculadora, $){
+define(['calculadora', 'jquery'], function(Calculadora, $){
     var app = new Calculadora();
 });

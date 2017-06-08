@@ -1,11 +1,10 @@
-define(['app', 'jquery'], function(Calculadora, $){
+define(['calculadora', 'jquery'], function(Calculadora, $){
     describe('Testando Calculadora', function(){
         it('Testando Soma com operandos válidos', function(){
             var calc = new Calculadora();
             var res = calc.somar(5, 7);
             expect(res).toEqual(12);          
         });
-
 
         it('Testando soma com operandos inválidos', function(){
             var calc = new Calculadora();
